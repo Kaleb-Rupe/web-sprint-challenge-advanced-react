@@ -84,9 +84,8 @@ export default function AppFunctional(props) {
   }
 
   function move() {
-    if (steps == 0) return `You moved ${steps} times`;
+    if (steps == 0 || steps > 1) return `You moved ${steps} times`;
     if (steps == 1) return `You moved ${steps} time`;
-    if (steps > 1) return `You moved ${steps} times`;
   }
 
   function onChange(evt) {

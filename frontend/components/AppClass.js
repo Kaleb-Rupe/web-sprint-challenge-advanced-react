@@ -46,7 +46,7 @@ export default class AppClass extends React.Component {
     )})`;
   };
 
-  reset = (e) => {
+  reset = () => {
     // Use this helper to reset all states to their initial values.
     this.setState({
       message: "",
@@ -101,10 +101,10 @@ export default class AppClass extends React.Component {
     }
   };
 
-  move = (evt) => {
-    if (this.state.steps == 0) return `You moved ${this.state.steps} times`;
+  move = () => {
+    if (this.state.steps == 0 || this.state.steps > 1)
+      return `You moved ${this.state.steps} times`;
     if (this.state.steps == 1) return `You moved ${this.state.steps} time`;
-    if (this.state.steps > 1) return `You moved ${this.state.steps} times`;
   };
 
   onChange = (evt) => {
